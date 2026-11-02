@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fafc" />
+  <meta name="description" content="Portofolio Wahyu Dwi Prakoso — Data Analyst. Menampilkan proyek analisis data, pengalaman, keahlian, dan pelatihan." />
+  <title>Wahyu Dwi Prakoso | Data Analyst Portfolio</title>
+
+  <!-- Tailwind CSS via CDN: cocok untuk prototipe dan hosting statis. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#172033",
+            muted: "#64748b",
+            accent: "#2563eb",
+            paper: "#f8fafc",
+            line: "#e2e8f0"
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+          },
+          boxShadow: {
+            soft: "0 12px 35px rgba(15, 23, 42, .06)"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: "DM Sans", sans-serif; }
+    h1,h2,h3,.display { font-family: "Manrope", sans-serif; }
+    .section-anchor { scroll-margin-top: 92px; }
+    .nav-link.active { color: #2563eb; }
+    .project-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(15,23,42,.09); }
+    .fade-up { animation: fadeUp .65s ease both; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink antialiased">
+  <!-- NAVBAR -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navigasi utama">
+      <a href="#beranda" class="display text-lg font-extrabold tracking-tight">WAHYU<span class="text-accent">.</span></a>
+      <div class="hidden items-center gap-7 md:flex">
+        <a class="nav-link text-sm font-semibold text-slate-600 hover:text-accent" href="#tentang">Tentang</a>
+        <a class="nav-link text-sm font-semibold text-slate-600 hover:text-accent" href="#keahlian">Keahlian</a>
+        <a class="nav-link text-sm font-semibold text-slate-600 hover:text-accent" href="#pengalaman">Pengalaman</a>
+        <a class="nav-link text-sm font-semibold text-slate-600 hover:text-accent" href="#proyek">Proyek</a>
+        <a class="nav-link text-sm font-semibold text-slate-600 hover:text-accent" href="#pelatihan">Pelatihan</a>
+        <a href="#kontak" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-accent">Hubungi Saya</a>
+      </div>
+      <button id="menuButton" class="rounded-lg border border-slate-200 p-2 text-ink md:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-slate-100 bg-white px-5 py-3 md:hidden">
+      <div class="flex flex-col gap-1">
+        <a class="mobile-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-600" href="#tentang">Tentang</a>
+        <a class="mobile-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-600" href="#keahlian">Keahlian</a>
+        <a class="mobile-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-600" href="#pengalaman">Pengalaman</a>
+        <a class="mobile-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-600" href="#proyek">Proyek</a>
+        <a class="mobile-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-600" href="#pelatihan">Pelatihan</a>
+        <a class="mobile-link rounded-lg px-3 py-2 text-sm font-semibold text-accent" href="#kontak">Hubungi Saya</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="beranda" class="section-anchor relative overflow-hidden pt-32">
+      <div class="absolute -right-24 -top-16 h-80 w-80 rounded-full bg-blue-100/70 blur-3xl"></div>
+      <div class="absolute -left-24 top-72 h-64 w-64 rounded-full bg-indigo-100/60 blur-3xl"></div>
+      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:pb-28">
+        <div class="fade-up">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[.16em] text-accent shadow-sm">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span> Portofolio Data Analyst
+          </div>
+          <p class="mb-3 text-sm font-semibold text-slate-500">Halo, saya</p>
+          <h1 class="display max-w-2xl text-4xl font-extrabold leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+            Wahyu Dwi<br><span class="text-accent">Prakoso.</span>
+          </h1>
+          <h2 class="mt-5 text-xl font-bold text-slate-700 sm:text-2xl">Lulusan Teknik Informatika · Calon Data Analyst</h2>
+          <p class="mt-5 max-w-xl text-base leading-8 text-slate-600">
+            Tertarik mengolah data menjadi informasi yang terstruktur dan mudah dipahami. Berfokus pada analisis data, pelaporan, serta visualisasi untuk membantu proses pengambilan keputusan.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#proyek" class="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700">
+              Lihat Proyek <span aria-hidden="true">↗</span>
+            </a>
+            <a href="#kontak" class="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-ink transition hover:border-ink">Hubungi Saya</a>
+          </div>
+          <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500">
+            <span class="inline-flex items-center gap-2"><span class="font-bold text-ink">IPK 3,77</span></span>
+            <span class="h-1 w-1 rounded-full bg-slate-300"></span>
+            <span>Python · SQL · Excel</span>
+            <span class="h-1 w-1 rounded-full bg-slate-300"></span>
+            <span>Indonesia</span>
+          </div>
+        </div>
+
+        <div class="fade-up relative mx-auto w-full max-w-md" style="animation-delay:.12s">
+          <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-100 to-indigo-100 blur-xl"></div>
+          <div class="relative rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-soft sm:p-8">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[.18em] text-slate-400">Fokus Saya</p>
+                <p class="mt-1 text-lg font-extrabold">Data & Insight</p>
+              </div>
+              <div class="rounded-2xl bg-blue-50 p-3 text-2xl">⌁</div>
+            </div>
+            <div class="mt-7 space-y-5">
+              <div>
+                <div class="mb-2 flex justify-between text-sm"><span class="font-semibold">Data Analysis</span><span class="text-slate-400">EDA · Statistik</span></div>
+                <div class="h-2 overflow-hidden rounded-full bg-slate-100"><div class="h-full w-[78%] rounded-full bg-blue-600"></div></div>
+              </div>
+              <div>
+                <div class="mb-2 flex justify-between text-sm"><span class="font-semibold">Data Processing</span><span class="text-slate-400">Cleaning · Excel</span></div>
+                <div class="h-2 overflow-hidden rounded-full bg-slate-100"><div class="h-full w-[82%] rounded-full bg-blue-500"></div></div>
+              </div>
+              <div>
+                <div class="mb-2 flex justify-between text-sm"><span class="font-semibold">Database Query</span><span class="text-slate-400">SQL</span></div>
+                <div class="h-2 overflow-hidden rounded-full bg-slate-100"><div class="h-full w-[68%] rounded-full bg-indigo-500"></div></div>
+              </div>
+            </div>
+            <div class="mt-8 grid grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-2xl font-extrabold text-ink">3,77</p><p class="mt-1 text-xs text-slate-500">IPK</p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-2xl font-extrabold text-ink">4+</p><p class="mt-1 text-xs text-slate-500">Area pembelajaran data*</p></div>
+            </div>
+            <p class="mt-3 text-[10px] leading-4 text-slate-400">*Python, SQL, analisis data, dan visualisasi. Indikator visual ini bukan hasil asesmen kemampuan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="tentang" class="section-anchor border-y border-slate-200 bg-white py-20">
+      <div class="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[.7fr_1.3fr] lg:px-8">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-accent">01 / Tentang Saya</p>
+          <h2 class="display mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Mengenal saya<br>lebih dekat.</h2>
+        </div>
+        <div>
+          <p class="text-lg leading-9 text-slate-600">
+            Saya merupakan lulusan Teknik Informatika dengan IPK 3,77 dan memiliki ketertarikan pada bidang Data Analytics serta pengolahan data. Saya mempelajari proses pengumpulan, pembersihan, pengolahan, analisis, dan visualisasi data menggunakan Python, SQL, dan Microsoft Excel.
+          </p>
+          <p class="mt-5 text-base leading-8 text-slate-600">
+            Saya memahami dasar-dasar statistik deskriptif dan Exploratory Data Analysis (EDA), serta pernah mengembangkan dashboard interaktif menggunakan Streamlit. Melalui pengalaman magang dalam pengolahan data penjualan, saya memperoleh pengalaman menyusun rekapitulasi data untuk mendukung pemantauan aktivitas operasional.
+          </p>
+          <div class="mt-8 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl border border-slate-200 p-5"><p class="text-xs text-slate-400">Pendidikan</p><p class="mt-2 font-bold">Teknik Informatika</p></div>
+            <div class="rounded-2xl border border-slate-200 p-5"><p class="text-xs text-slate-400">IPK</p><p class="mt-2 font-bold">3,77</p></div>
+            <div class="rounded-2xl border border-slate-200 p-5"><p class="text-xs text-slate-400">Fokus</p><p class="mt-2 font-bold">Data Analytics</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="keahlian" class="section-anchor py-20">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-accent">02 / Keahlian</p>
+          <h2 class="display mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Perangkat & kemampuan.</h2>
+          <p class="mt-4 leading-8 text-slate-600">Keahlian yang saya pelajari dan gunakan dalam latihan maupun pengalaman pengolahan data.</p>
+        </div>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-xl">▦</div>
+            <h3 class="mt-5 text-lg font-extrabold">Microsoft Excel</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-500">Pengolahan data, pembersihan data, rekapitulasi, dan Pivot Table.</p>
+            <div class="mt-4 flex flex-wrap gap-2"><span class="skill-tag">Data Cleaning</span><span class="skill-tag">Pivot Table</span><span class="skill-tag">Reporting</span></div>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-xl">Py</div>
+            <h3 class="mt-5 text-lg font-extrabold">Python</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-500">Dasar pemrograman, manipulasi data, analisis, dan penggunaan library.</p>
+            <div class="mt-4 flex flex-wrap gap-2"><span class="skill-tag">Data Analysis</span><span class="skill-tag">Data Wrangling</span></div>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-50 text-xl">⌘</div>
+            <h3 class="mt-5 text-lg font-extrabold">SQL & Database</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-500">Query dasar dan pemahaman basis data relasional.</p>
+            <div class="mt-4 flex flex-wrap gap-2"><span class="skill-tag">SELECT</span><span class="skill-tag">WHERE</span><span class="skill-tag">DML</span></div>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-50 text-xl">◫</div>
+            <h3 class="mt-5 text-lg font-extrabold">Data Analytics</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-500">Analisis eksploratif untuk memahami karakteristik, pola, dan tren data.</p>
+            <div class="mt-4 flex flex-wrap gap-2"><span class="skill-tag">EDA</span><span class="skill-tag">Descriptive Statistics</span></div>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-50 text-xl">▤</div>
+            <h3 class="mt-5 text-lg font-extrabold">Visualisasi Data</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-500">Penyajian hasil analisis melalui visualisasi dan dashboard.</p>
+            <div class="mt-4 flex flex-wrap gap-2"><span class="skill-tag">Data Visualization</span><span class="skill-tag">Streamlit</span></div>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-50 text-xl">✳</div>
+            <h3 class="mt-5 text-lg font-extrabold">Kemampuan Pendukung</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-500">Pendekatan kerja untuk menyelesaikan tugas dan mengomunikasikan hasil.</p>
+            <div class="mt-4 flex flex-wrap gap-2"><span class="skill-tag">Analytical Thinking</span><span class="skill-tag">Attention to Detail</span><span class="skill-tag">Problem Solving</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="pengalaman" class="section-anchor border-y border-slate-200 bg-white py-20">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <p class="text-xs font-bold uppercase tracking-[.2em] text-accent">03 / Pengalaman</p>
+        <div class="mt-4 grid gap-10 lg:grid-cols-[.7fr_1.3fr]">
+          <div><h2 class="display text-3xl font-extrabold tracking-tight sm:text-4xl">Pengalaman kerja.</h2><p class="mt-4 leading-8 text-slate-600">Pengalaman praktik yang relevan dengan pengolahan dan pelaporan data.</p></div>
+          <article class="relative border-l-2 border-blue-100 pl-7">
+            <span class="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-4 border-white bg-accent ring-2 ring-blue-100"></span>
+            <p class="text-xs font-bold uppercase tracking-wider text-accent">Pengalaman Magang</p>
+            <h3 class="mt-2 text-xl font-extrabold">Staf Magang — Pengolahan Data Penjualan</h3>
+            <p class="mt-1 text-sm text-slate-500">PT Indofood Fortuna Makmur · Mei–Juli 2026</p>
+            <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-600">
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>Melakukan pembersihan dan pengolahan data penjualan harian untuk memastikan konsistensi data sebelum direkapitulasi.</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>Mengolah data transaksi menjadi rekapitulasi laporan menggunakan Microsoft Excel dan fitur Pivot Table.</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>Mengelompokkan data penjualan berdasarkan SKU, sales, periode mingguan, dan transaksi invoice untuk mendukung pemantauan penjualan.</li>
+            </ul>
+            <div class="mt-5 flex flex-wrap gap-2"><span class="skill-tag">Microsoft Excel</span><span class="skill-tag">Data Cleaning</span><span class="skill-tag">Pivot Table</span><span class="skill-tag">Sales Reporting</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="proyek" class="section-anchor py-20">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div><p class="text-xs font-bold uppercase tracking-[.2em] text-accent">04 / Proyek</p><h2 class="display mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Karya & proyek analisis.</h2><p class="mt-4 max-w-xl leading-8 text-slate-600">Beberapa proyek untuk menunjukkan proses, pendekatan, dan hasil pembelajaran di bidang data.</p></div>
+          <div class="flex flex-wrap gap-2" id="projectFilters">
+            <button class="filter-btn rounded-full bg-ink px-4 py-2 text-xs font-bold text-white" data-filter="all">Semua</button>
+            <button class="filter-btn rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-600" data-filter="python">Python</button>
+            <button class="filter-btn rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-600" data-filter="sql">SQL</button>
+            <button class="filter-btn rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-600" data-filter="business">Bisnis</button>
+          </div>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2">
+          <article class="project-card overflow-hidden rounded-2xl border border-slate-200 bg-white" data-category="python">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
+              <div class="w-full max-w-xs rounded-xl border border-white bg-white/90 p-4 shadow-lg">
+                <div class="mb-4 flex gap-1"><i class="h-2 w-2 rounded-full bg-rose-300"></i><i class="h-2 w-2 rounded-full bg-amber-300"></i><i class="h-2 w-2 rounded-full bg-emerald-300"></i></div>
+                <div class="flex h-20 items-end gap-2 border-b border-l border-slate-200 px-3"><span class="h-8 flex-1 rounded-t bg-blue-200"></span><span class="h-12 flex-1 rounded-t bg-blue-300"></span><span class="h-16 flex-1 rounded-t bg-blue-500"></span><span class="h-10 flex-1 rounded-t bg-indigo-300"></span><span class="h-14 flex-1 rounded-t bg-blue-400"></span></div>
+                <div class="mt-3 h-2 w-2/5 rounded bg-slate-200"></div>
+              </div>
+            </div>
+            <div class="p-6"><div class="flex items-center justify-between gap-3"><span class="text-xs font-bold uppercase tracking-wider text-accent">Analisis Data</span><span class="text-xs text-slate-400">Python · EDA</span></div><h3 class="mt-3 text-xl font-extrabold">Tren Peminjaman Sepeda</h3><p class="mt-3 text-sm leading-7 text-slate-600">Analisis data peminjaman sepeda untuk mengeksplorasi pola penggunaan dan tren berdasarkan data yang tersedia.</p><div class="mt-5 flex flex-wrap gap-2"><span class="skill-tag">Python</span><span class="skill-tag">Pandas</span><span class="skill-tag">EDA</span></div><a class="project-link mt-6 inline-flex items-center gap-2 text-sm font-bold text-accent hover:gap-3" href="#" target="_blank" rel="noreferrer">Lihat proyek <span>↗</span></a></div>
+          </article>
+          <article class="project-card overflow-hidden rounded-2xl border border-slate-200 bg-white" data-category="business">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-100 p-8">
+              <div class="w-full max-w-xs rounded-xl border border-white bg-white/90 p-4 shadow-lg">
+                <div class="grid grid-cols-3 gap-2"><div class="rounded bg-emerald-50 p-2"><div class="h-2 w-6 rounded bg-emerald-200"></div><div class="mt-2 h-4 w-10 rounded bg-emerald-500"></div></div><div class="rounded bg-blue-50 p-2"><div class="h-2 w-6 rounded bg-blue-200"></div><div class="mt-2 h-4 w-10 rounded bg-blue-500"></div></div><div class="rounded bg-amber-50 p-2"><div class="h-2 w-6 rounded bg-amber-200"></div><div class="mt-2 h-4 w-10 rounded bg-amber-500"></div></div></div>
+                <div class="mt-3 flex h-14 items-end gap-1"><span class="h-5 flex-1 rounded-t bg-emerald-200"></span><span class="h-8 flex-1 rounded-t bg-emerald-300"></span><span class="h-10 flex-1 rounded-t bg-emerald-500"></span><span class="h-7 flex-1 rounded-t bg-teal-300"></span><span class="h-12 flex-1 rounded-t bg-emerald-400"></span></div>
+              </div>
+            </div>
+            <div class="p-6"><div class="flex items-center justify-between gap-3"><span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Analisis Bisnis</span><span class="text-xs text-slate-400">Excel · Pivot Table</span></div><h3 class="mt-3 text-xl font-extrabold">Rekapitulasi Data Penjualan</h3><p class="mt-3 text-sm leading-7 text-slate-600">Contoh alur pengolahan data penjualan harian menjadi rekap berdasarkan SKU, sales, periode, dan invoice. Gunakan data simulasi atau data yang telah dianonimkan.</p><div class="mt-5 flex flex-wrap gap-2"><span class="skill-tag">Excel</span><span class="skill-tag">Data Cleaning</span><span class="skill-tag">Pivot Table</span></div><a class="project-link mt-6 inline-flex items-center gap-2 text-sm font-bold text-accent hover:gap-3" href="#" target="_blank" rel="noreferrer">Lihat proyek <span>↗</span></a></div>
+          </article>
+          <article class="project-card overflow-hidden rounded-2xl border border-slate-200 bg-white" data-category="python">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-violet-50 to-fuchsia-100 p-8"><div class="grid w-full max-w-xs grid-cols-4 gap-2"><div class="col-span-4 rounded-lg bg-white p-3 shadow"><div class="h-2 w-1/3 rounded bg-violet-200"></div><div class="mt-3 grid grid-cols-3 gap-2"><div class="h-12 rounded bg-violet-100"></div><div class="h-12 rounded bg-fuchsia-100"></div><div class="h-12 rounded bg-indigo-100"></div></div></div><div class="col-span-4 h-12 rounded-lg bg-white/90 shadow"></div></div></div>
+            <div class="p-6"><div class="flex items-center justify-between gap-3"><span class="text-xs font-bold uppercase tracking-wider text-violet-700">Dashboard</span><span class="text-xs text-slate-400">Python · Streamlit</span></div><h3 class="mt-3 text-xl font-extrabold">Dashboard Analisis Data</h3><p class="mt-3 text-sm leading-7 text-slate-600">Pengembangan dashboard interaktif sebagai media untuk menyajikan hasil analisis dan visualisasi data.</p><div class="mt-5 flex flex-wrap gap-2"><span class="skill-tag">Python</span><span class="skill-tag">Streamlit</span><span class="skill-tag">Visualization</span></div><a class="project-link mt-6 inline-flex items-center gap-2 text-sm font-bold text-accent hover:gap-3" href="#" target="_blank" rel="noreferrer">Lihat proyek <span>↗</span></a></div>
+          </article>
+          <article class="project-card overflow-hidden rounded-2xl border border-slate-200 bg-white" data-category="sql">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-amber-50 to-orange-100 p-8"><div class="w-full max-w-xs rounded-xl bg-slate-900 p-5 font-mono text-xs leading-6 text-emerald-300 shadow-xl"><div class="text-slate-500">-- Contoh query SQL</div><div>SELECT</div><div class="pl-4 text-sky-200">kategori, SUM(penjualan)</div><div>FROM <span class="text-amber-200">transaksi</span></div><div>GROUP BY kategori;</div></div></div>
+            <div class="p-6"><div class="flex items-center justify-between gap-3"><span class="text-xs font-bold uppercase tracking-wider text-amber-700">Database</span><span class="text-xs text-slate-400">SQL</span></div><h3 class="mt-3 text-xl font-extrabold">Eksplorasi Query SQL</h3><p class="mt-3 text-sm leading-7 text-slate-600">Latihan pengambilan dan pengelolaan data menggunakan query dasar serta konsep basis data relasional.</p><div class="mt-5 flex flex-wrap gap-2"><span class="skill-tag">SQL</span><span class="skill-tag">SELECT</span><span class="skill-tag">Database</span></div><a class="project-link mt-6 inline-flex items-center gap-2 text-sm font-bold text-accent hover:gap-3" href="#" target="_blank" rel="noreferrer">Lihat proyek <span>↗</span></a></div>
+          </article>
+        </div>
+        <p class="mt-6 text-xs leading-6 text-slate-400">Catatan: kartu proyek di atas merupakan tempat awal untuk mengisi proyek dan tautan repositori/demonstrasi. Perbarui deskripsi, hasil, visual, dan tautannya sesuai proyek yang benar-benar telah dikerjakan.</p>
+      </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section id="pelatihan" class="section-anchor border-y border-slate-200 bg-white py-20">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <p class="text-xs font-bold uppercase tracking-[.2em] text-accent">05 / Pelatihan & Sertifikasi</p>
+        <h2 class="display mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Pembelajaran berkelanjutan.</h2>
+        <p class="mt-4 max-w-2xl leading-8 text-slate-600">Pelatihan dan pembelajaran yang mendukung pengembangan kompetensi di bidang data dan teknologi.</p>
+        <div class="mt-10 grid gap-4 md:grid-cols-2">
+          <article class="rounded-2xl border border-slate-200 p-6"><p class="text-xs font-bold uppercase tracking-wider text-accent">Dicoding · Pelatihan</p><h3 class="mt-3 font-extrabold">Belajar Analisis Data dengan Python</h3><p class="mt-2 text-sm leading-7 text-slate-500">Statistik deskriptif, data wrangling, EDA, visualisasi data, dan dashboard menggunakan Streamlit.</p><p class="mt-4 text-xs text-slate-400">Tambahkan tanggal dan tautan sertifikat.</p></article>
+          <article class="rounded-2xl border border-slate-200 p-6"><p class="text-xs font-bold uppercase tracking-wider text-accent">Dicoding · Pelatihan</p><h3 class="mt-3 font-extrabold">Belajar Dasar Pemrograman Python</h3><p class="mt-2 text-sm leading-7 text-slate-500">Dasar Python, struktur kontrol, fungsi, OOP, unit testing, dan pengenalan library.</p><p class="mt-4 text-xs text-slate-400">Tambahkan tanggal dan tautan sertifikat.</p></article>
+          <article class="rounded-2xl border border-slate-200 p-6"><p class="text-xs font-bold uppercase tracking-wider text-accent">Dicoding · Pelatihan</p><h3 class="mt-3 font-extrabold">Belajar Dasar SQL</h3><p class="mt-2 text-sm leading-7 text-slate-500">Konsep basis data, DBMS, SQL, DDL, DML, constraints, dan query dasar.</p><p class="mt-4 text-xs text-slate-400">Sesuaikan dengan nama resmi kelas pada sertifikat.</p></article>
+          <article class="rounded-2xl border border-slate-200 p-6"><p class="text-xs font-bold uppercase tracking-wider text-accent">Dicoding · Pelatihan</p><h3 class="mt-3 font-extrabold">Belajar Dasar Manajemen Proyek</h3><p class="mt-2 text-sm leading-7 text-slate-500">Siklus proyek, Waterfall, Agile, Lean, Six Sigma, dan struktur organisasi.</p><p class="mt-4 text-xs text-slate-400">Sertifikat: NVP74Q5WOPR0 · 21 September 2024</p></article>
+          <article class="rounded-2xl border border-slate-200 p-6"><p class="text-xs font-bold uppercase tracking-wider text-accent">Dicoding · Pelatihan</p><h3 class="mt-3 font-extrabold">Pengenalan AI & Deep Learning</h3><p class="mt-2 text-sm leading-7 text-slate-500">Konsep AI, data untuk AI, pengantar Machine Learning, dan Deep Learning.</p><p class="mt-4 text-xs text-slate-400">Tambahkan nama resmi kelas dan tanggal.</p></article>
+          <article class="rounded-2xl border border-slate-200 p-6"><p class="text-xs font-bold uppercase tracking-wider text-accent">Sertifikasi / Hasil Tes</p><h3 class="mt-3 font-extrabold">TOEIC</h3><p class="mt-2 text-sm leading-7 text-slate-500">Tes kemampuan bahasa Inggris.</p><p class="mt-4 text-sm font-semibold text-slate-700">Skor TOEIC: 350</p><p class="mt-2 text-xs text-slate-400">Tanggal tes dan lembaga penerbit dapat ditambahkan jika ingin ditampilkan.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="kontak" class="section-anchor py-20">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <div class="overflow-hidden rounded-[2rem] bg-ink px-7 py-12 text-white sm:px-12 sm:py-16">
+          <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[.2em] text-blue-300">06 / Kontak</p>
+              <h2 class="display mt-4 max-w-2xl text-3xl font-extrabold leading-tight sm:text-5xl">Mari terhubung dan berdiskusi.</h2>
+              <p class="mt-5 max-w-xl leading-8 text-slate-300">Terbuka untuk kesempatan kerja, kolaborasi, dan diskusi seputar analisis data.</p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <a id="emailLink" href="mailto:wahyu160804@gmail.com" class="rounded-full bg-white px-6 py-3 text-center text-sm font-bold text-ink transition hover:bg-blue-100">Kirim Email ↗</a>
+              <a id="linkedinLink" href="#" target="_blank" rel="noreferrer" class="rounded-full border border-slate-500 px-6 py-3 text-center text-sm font-bold text-white transition hover:border-white">LinkedIn ↗</a>
+              <a id="githubLink" href="#" target="_blank" rel="noreferrer" class="rounded-full border border-slate-500 px-6 py-3 text-center text-sm font-bold text-white transition hover:border-white">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-7 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <p>© <span id="year"></span> Wahyu Dwi Prakoso. Dibuat dengan semangat belajar dan berkembang.</p>
+      <a href="#beranda" class="font-semibold text-slate-500 hover:text-accent">Kembali ke atas ↑</a>
+    </div>
+  </footer>
+
+  <style>
+    .skill-tag { display:inline-flex; border-radius:999px; background:#f1f5f9; padding:.35rem .65rem; font-size:.7rem; font-weight:700; color:#475569; }
+  </style>
+  <script>
+    // ==============================================
+    // EDIT DATA KONTAK DI BAGIAN INI
+    // ==============================================
+    const PROFILE = {
+      email: "wahyu160804@gmail.com",
+      linkedin: "https://www.linkedin.com/in/wahyudwiprakoso/",
+      github: "https://github.com/Wahyu160"
+    };
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("emailLink").href = `mailto:${PROFILE.email}`;
+    const setSocialLink = (id, url) => {
+      const el = document.getElementById(id);
+      if (url) { el.href = url; } else { el.href = "#kontak"; el.addEventListener("click", e => { e.preventDefault(); alert("Tambahkan tautan profil pada bagian PROFILE di index.html."); }); }
+    };
+    setSocialLink("linkedinLink", PROFILE.linkedin);
+    setSocialLink("githubLink", PROFILE.github);
+
+    // Menu mobile
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuButton.addEventListener("click", () => {
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      mobileMenu.classList.toggle("hidden");
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+    });
+    document.querySelectorAll(".mobile-link").forEach(link => link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuButton.setAttribute("aria-expanded", "false");
+    }));
+
+    // Filter proyek
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+    filterButtons.forEach(button => button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+      filterButtons.forEach(btn => {
+        btn.classList.remove("bg-ink", "text-white");
+        btn.classList.add("border", "border-slate-200", "bg-white", "text-slate-600");
+      });
+      button.classList.add("bg-ink", "text-white");
+      button.classList.remove("border", "border-slate-200", "bg-white", "text-slate-600");
+      projectCards.forEach(card => {
+        card.classList.toggle("hidden", filter !== "all" && card.dataset.category !== filter);
+      });
+    }));
+
+    // Penanda navigasi aktif saat bagian halaman terlihat
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`));
+        }
+      });
+    }, { rootMargin: "-35% 0px -55% 0px" });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
